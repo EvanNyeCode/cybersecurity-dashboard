@@ -1,0 +1,79 @@
+{
+  "app": "Cybersecurity Alert Dashboard",
+  "version": "v10.2 sample",
+  "generated_at": "2026-07-05T00:00:00Z",
+  "system": {
+    "os": "Windows 11",
+    "elevated": true,
+    "host": "localhost"
+  },
+  "score": {
+    "overall": 96,
+    "status": "strong",
+    "passed": 118,
+    "warnings": 4,
+    "failed": 2
+  },
+  "category_summary": [
+    {
+      "category": "Firewall",
+      "passed": 8,
+      "warning": 0,
+      "failed": 0
+    },
+    {
+      "category": "Microsoft Defender",
+      "passed": 12,
+      "warning": 1,
+      "failed": 0
+    },
+    {
+      "category": "Remote Access",
+      "passed": 10,
+      "warning": 1,
+      "failed": 1
+    },
+    {
+      "category": "Network Hardening",
+      "passed": 15,
+      "warning": 1,
+      "failed": 0
+    },
+    {
+      "category": "Privacy and Telemetry",
+      "passed": 11,
+      "warning": 1,
+      "failed": 1
+    }
+  ],
+  "sample_findings": [
+    {
+      "id": "firewall_profiles_enabled",
+      "title": "Windows Firewall profiles enabled",
+      "category": "Firewall",
+      "severity": "high",
+      "status": "pass",
+      "evidence": "Domain, private, and public firewall profiles are enabled.",
+      "recommendation": "Keep all firewall profiles enabled."
+    },
+    {
+      "id": "rdp_nla_required",
+      "title": "Remote Desktop Network Level Authentication",
+      "category": "Remote Access",
+      "severity": "high",
+      "status": "pass",
+      "evidence": "NLA is required for Remote Desktop connections.",
+      "recommendation": "Keep NLA enabled if Remote Desktop is used."
+    },
+    {
+      "id": "sample_privacy_setting",
+      "title": "Sample privacy hardening item",
+      "category": "Privacy and Telemetry",
+      "severity": "medium",
+      "status": "warning",
+      "evidence": "Example report entry only.",
+      "recommendation": "Review the finding in the dashboard before applying remediation."
+    }
+  ],
+  "note": "This is a sanitized sample report for repository documentation. It is not a scan result from a specific machine."
+}
