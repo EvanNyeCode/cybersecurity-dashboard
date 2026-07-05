@@ -1,104 +1,195 @@
 # Cybersecurity Alert Dashboard v10.2
 
-Local Windows security assessment and hardening dashboard built with Python, HTML, CSS, and JavaScript.
+A local Windows cybersecurity assessment and remediation dashboard built with **Python**, **HTML**, **CSS**, and **JavaScript**.
+
+The application evaluates a Windows system against dozens of security best practices, calculates an overall security score, and provides one-click remediation for supported findings. Reports can be exported for documentation and review.
+
+---
+
+## Features
+
+- Windows security posture assessment
+- Overall security score calculation
+- Risk categorization by severity
+- One-click remediation for supported findings
+- Windows Registry hardening
+- Firewall and networking checks
+- Privacy and system configuration checks
+- JSON report export
+- Action logging
+- Interactive dashboard with live results
+
+---
+
+# Dashboard
 
 ![Dashboard](assets/dashboard.png)
 
-## Overview
+---
 
-Cybersecurity Alert Dashboard evaluates a Windows PC for security posture issues, calculates a risk score, presents findings in an interactive dashboard, and provides allowlisted remediation actions for selected hardening settings.
+# Security Analytics
 
-The project was built as a local-first desktop security tool. It does not upload scan results to the cloud and does not rely on third-party Python packages.
+![Analytics](assets/analytics.png)
 
-## Key features
+---
 
-- Localhost-only Python backend
-- Browser-based HTML/CSS/JavaScript dashboard
-- Windows security posture scan
-- Weighted risk scoring
-- Detailed findings with evidence and recommendations
-- Individual remediation actions
-- Safe bulk remediation workflow
-- JSON report export
-- Local audit logging
-- Visual analysis tabs and category pass-rate bars
+# Findings
 
-## Screenshots
+![Findings](assets/findings.png)
 
-### Dashboard overview
+---
 
-![Dashboard overview](assets/dashboard.png)
+# Action Log
 
-### Detailed findings
+![Action Log](assets/action_log.png)
 
-![Detailed findings](assets/findings.png)
+---
 
-### Visual analytics
+# Category Overview
 
-![Visual analytics](assets/analytics.png)
+![Category Overview](assets/category_overview.png)
 
-### Remediation action log
+---
 
-![Action log](assets/action_log.png)
-
-## Technologies
+# Technologies Used
 
 - Python
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 - PowerShell
 - Windows Registry
-- `netsh`
-- `auditpol`
+- Windows Security Policies
 - JSON
 
-## Architecture
+---
 
-```text
-Browser dashboard
-        |
-        v
-Local HTTP API on 127.0.0.1
-        |
-        v
-Python scan and remediation engine
-        |
-        +--> Windows Registry
-        +--> PowerShell
-        +--> Windows services
-        +--> Firewall and audit policy tooling
+# Repository Structure
+
+```
+cybersecurity-dashboard
+│
+├── assets/
+│   ├── dashboard.png
+│   ├── findings.png
+│   ├── analytics.png
+│   ├── action_log.png
+│   └── category_overview.png
+│
+├── docs/
+│   ├── Architecture.md
+│   ├── User_Guide.md
+│   ├── Checks_and_Remediations.md
+│   └── Security_Model.md
+│
+├── sample_reports/
+│   └── sample_report.json
+│
+├── cyber_dashboard.py
+├── Run_Dashboard.bat
+├── Run_Dashboard_Admin.bat
+├── README.md
+├── SECURITY.md
+├── CHANGELOG.md
+├── ROADMAP.md
+├── CONTRIBUTING.md
+└── LICENSE
 ```
 
-## How to run
+---
 
-1. Install Python 3.10 or newer.
-2. Clone or download this repository.
-3. Run one of the launch scripts:
+# Documentation
 
-```text
+| Document | Description |
+|----------|-------------|
+| [User Guide](docs/User_Guide.md) | Installation and usage instructions |
+| [Architecture](docs/Architecture.md) | Application architecture |
+| [Security Model](docs/Security_Model.md) | Security design principles |
+| [Checks & Remediations](docs/Checks_and_Remediations.md) | List of implemented security checks |
+| [Security Policy](SECURITY.md) | Reporting vulnerabilities |
+| [Roadmap](ROADMAP.md) | Planned improvements |
+| [Changelog](CHANGELOG.md) | Version history |
+
+---
+
+# Running the Application
+
+Normal mode
+
+```
 Run_Dashboard.bat
+```
+
+Administrator mode
+
+```
 Run_Dashboard_Admin.bat
 ```
 
-Use administrator mode for full remediation coverage.
+Or
 
-## Safety notes
+```
+python cyber_dashboard.py
+```
 
-- Runs locally on `127.0.0.1`.
-- Uses a per-session bearer token.
-- Uses static remediation allowlists.
-- Does not accept arbitrary shell commands from the browser.
-- Does not upload reports or telemetry.
+---
 
-## Documentation
+# Sample Report
 
-- [User Guide](docs/User_Guide.md)
-- [Architecture](docs/Architecture.md)
-- [Checks and Remediations](docs/Checks_and_Remediations.md)
-- [Security Model](docs/Security_Model.md)
-- [Roadmap](ROADMAP.md)
+Example exported report:
 
-## License
+[sample_report.json](sample_reports/sample_report.json)
 
-MIT License.
+---
+
+# Current Capabilities
+
+The dashboard currently includes functionality such as:
+
+- Windows security configuration assessment
+- Registry hardening
+- Network security checks
+- Windows service analysis
+- Firewall configuration review
+- Privacy configuration analysis
+- Audit policy verification
+- Automated remediation
+- Security scoring
+- Exportable reports
+
+---
+
+# Future Enhancements
+
+See the project roadmap:
+
+[ROADMAP.md](ROADMAP.md)
+
+Planned improvements include:
+
+- Scheduled security scans
+- Additional Windows hardening checks
+- CIS Benchmark comparison
+- Enhanced reporting
+- Expanded security analytics
+- Performance optimizations
+
+---
+
+# License
+
+This project is licensed under the MIT License.
+
+See:
+
+[LICENSE](LICENSE)
+
+---
+
+# Author
+
+**Evan Nye**
+
+Computer Science (Cybersecurity) student
+
+Python • Cybersecurity • Automation • Windows Security
