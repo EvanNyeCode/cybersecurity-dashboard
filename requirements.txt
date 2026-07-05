@@ -1,0 +1,8 @@
+# Cybersecurity Alert Dashboard v10.2
+#
+# This project is intentionally built with the Python standard library only.
+# No third-party Python packages are required.
+#
+# Required runtime:
+# Python 3.10+
+# Windows 10/11
