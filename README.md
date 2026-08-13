@@ -188,7 +188,7 @@ See:
 
 # Author
 
-**Evan Nye**
+**Evan Guy**
 
 Computer Science (Cybersecurity) student
 
